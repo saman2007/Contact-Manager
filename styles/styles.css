@@ -1,0 +1,207 @@
+@import "reset.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css");
+
+body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.contacts-list {
+    margin: 100px auto;
+    min-height: 300px;
+    padding-bottom: 10px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+    box-shadow: 2px 0px 20px #b4b4b4;
+}
+
+.contacts-list h2 {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-list .delete-all {
+    background-color: rgb(250, 21, 21);
+    border-radius: 5px;
+    border: rgb(182, 11, 11) solid 1px;
+    margin-top: 15px;
+    padding: 10px 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contacts-list .delete-all:hover {
+    background-color: rgb(194, 16, 16);
+}
+
+main .add-contact {
+    border: none;
+    background-color: rgb(14, 230, 60);
+    position: fixed;
+    top: 85%;
+    left: 90%;
+    font-size: xx-large;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #929292;
+    cursor: pointer;
+    transition: 0.40s;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+
+main .add-contact:hover {
+    background-color: rgb(13, 207, 55);
+    box-shadow: 0px 0px 5px #929292;
+}
+
+.contacts-list .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border: #dfdfdf 1px solid;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contacts-list .contact:hover {
+
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  0px 0px 50px #bebebe,
+             0px 0px 50px #ffffff;
+}
+
+.contacts-list .contact .description-text {
+    word-break: break-word;
+}
+
+.contacts-list .contact .name {
+    margin-left: 20px;
+}
+
+.contacts-list .contact .profile {
+    background-image: url("../images/profile-bg.png");
+    background-position-x: 180px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: x-large;
+    width: 44px;
+    height: 44px;
+}
+
+.modal {
+    background-color: rgb(0, 0, 0, 0.3);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s ease;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.30s;
+}
+
+.modal.open {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal .modal-card {
+    background: linear-gradient(49deg, #dadada, #ffffff);
+    overflow: auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.modal .modal-card .inputs-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.modal .modal-card .inputs-container .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-flow: column;
+    margin-bottom: 10px;
+}
+
+.modal .modal-card .inputs-container .input-container label {
+    margin-bottom: 3px;
+}
+
+.modal .modal-card input {
+    padding: 5px;
+    outline: none;
+    border: rgb(13, 207, 55) solid 2px;
+    border-radius: 5px;
+}
+
+.modal .modal-card .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal .modal-card .buttons button {
+    padding: 5px 10px;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal .modal-card .buttons .save {
+    margin-right: 5px;
+    background-color: rgb(14, 230, 60);
+    border: 1px solid rgb(11, 179, 47);
+}
+
+.modal .modal-card .buttons .save:hover {
+    background-color: rgb(14, 199, 54);
+}
+
+.modal .modal-card .buttons .cancel {
+    background-color: rgb(250, 21, 21);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: rgb(182, 11, 11) solid 1px;
+}
+
+.modal .modal-card .buttons .cancel:hover {
+    background-color: rgb(194, 16, 16);
+}
+
+.modal .modal-card .buttons .delete {
+    background-color: rgb(250, 21, 21);
+    border-radius: 5px;
+    border: rgb(182, 11, 11) solid 1px;
+    display: none;
+}
+
+.modal .modal-card .buttons .delete:hover {
+    background-color: rgb(194, 16, 16);
+}
